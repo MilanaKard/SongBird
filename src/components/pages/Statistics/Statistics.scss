@@ -1,0 +1,99 @@
+@import '../../../styles/constants';
+
+.table {
+    margin: 3rem auto;
+    border-collapse: collapse;
+    color: $text-color;
+    font-size: 1.6em;
+  }
+  
+  .table-head-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $header-color;
+    padding: 0 2rem;
+    height: 4rem;
+  }
+  
+  td,
+  th {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .arrow {
+    margin-left: 0.5rem;
+    width: 1.5rem;
+    height: 3rem;
+    background-image: url('/assets/svg/arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s;
+    opacity: 0;
+    &.asc {
+      transform: rotate(180deg);
+      opacity: 1;
+    }
+    &.desc {      
+      opacity: 1;
+    }
+  }
+
+  .table-body {
+    td {
+      padding: 0 2rem;
+      height: 4rem;
+    }
+  }
+  
+  .table-clickable:hover {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
+
+  .pagination {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 0.8rem;
+    border-radius: 5rem;
+    box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.1);
+    width: max-content;
+  }
+  .page-item {
+    color: $dark-color;
+    list-style: none;
+    text-align: center;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  }
+  .page-link {
+    line-height: 4rem;
+  }
+  
+  .page-active,
+  .page-item:hover {
+    color: #ffffff;
+    background: $dark-color;
+    border-radius: 5rem;
+  }
+  
+  .page-disabled {
+    color: grey;
+    &:hover {
+      color: grey;
+      background: #ffffff;
+      cursor: default;
+    }
+  }

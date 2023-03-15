@@ -1,0 +1,30 @@
+.answers {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    height: 60rem;
+    @media (max-width: 500px) {
+      height: 65rem;
+    }
+    padding: 1.5rem 0;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 1rem;
+    padding-right: 2.8rem;
+} 
+
+}
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+} 
+
+.score {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}

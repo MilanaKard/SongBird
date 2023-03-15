@@ -1,0 +1,40 @@
+@import '../../../styles/constants';
+
+.home__container {
+display: flex;
+@media (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+.home__info {
+    flex-direction: column;
+    display: flex;
+    margin: 5rem 0;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $md) {
+        order: 1;
+      }
+}
+
+.home__image {
+    flex-grow: 1;
+    background-image: url('/assets/png/birds.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (max-width: $md) {
+        order: 0;
+        height: 34rem;
+        flex-grow: unset;
+      }
+}
+
+.home__description {
+    width: 30rem;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    line-height: 2rem;
+
+}

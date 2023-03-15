@@ -1,0 +1,59 @@
+@import '../../styles/constants';
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 1.5rem 0 3.5rem;
+  max-width: 100%;
+}
+
+.progress-container::before {
+  content: '';
+  background-color: lightgrey;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 0.4rem;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: $dark-color;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 0.4rem;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circles {
+  background-color: white;
+  color: #999;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.3rem solid lightgray;
+  transition: 0.4s ease;
+
+  &.finish {
+    background-color: red;
+    color: red;
+  }
+
+  &.active {
+    border-color: $dark-color;
+    cursor: pointer;
+  }
+
+  &.current {
+    border-color: $additional-color;
+  }
+}

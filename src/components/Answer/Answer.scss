@@ -1,0 +1,45 @@
+@import '../../styles/constants';
+.answer {
+  position: relative;
+  width: 100%;
+  padding-left: 1.5rem;
+  background-color: $first-color-lighten;
+  box-shadow: 0 2rem 4rem -1.4rem rgb(0 0 0 / 25%);
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 6rem;
+  height: 6rem;
+  color: $first-color-light;
+  transition: all 0.5s;
+  font-weight: 600;
+  &::before {
+    content: '';
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -2.7rem;
+    border-top: 3rem solid transparent;
+    border-bottom: 3rem solid transparent;
+    border-left: 3rem solid $first-color-lighten;
+    transition: all 0.5s;
+  }
+  &--correct {
+    background-color: $correct-color;
+    color: $text-color;
+    &::before {
+      border-left: 3rem solid $correct-color;
+    }
+  }
+  &--wrong {
+    background-color: $wrong-color;
+    color: $text-color;
+    &::before {
+      border-left: 3rem solid $wrong-color;
+    }
+  }
+  &.active::before {
+    opacity: 1;
+  }
+}
+

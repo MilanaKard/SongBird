@@ -1,0 +1,42 @@
+.congratulations {
+ text-align: center;  
+&__name {
+    flex: 1;
+    max-width: 50%;
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center; 
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+  }
+  
+  &__name::placeholder {
+    color: #fff;
+    opacity: .6;
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__text {
+    font-size: 2.1rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 28rem;
+    margin: 3rem 0 3.5rem;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('/assets/svg/congratulations.svg');
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}

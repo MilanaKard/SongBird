@@ -1,0 +1,95 @@
+@import '../../styles/constants';
+.card {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.4em;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.card--gallery {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $sm) {
+    width: calc((100% - 25px) / 2);
+  }
+  @media (min-width: $md) {
+    width: calc((100% - 25px * 2) / 3);
+  }
+  @media (min-width: $lg) {
+    width: calc((100% - 25px * 3) / 4);
+  }
+  &:hover {
+    cursor: pointer;
+    .card__controls {
+      opacity: 0.7;
+    }
+  }
+  .card__controls {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 9em;
+    background-image: url('/assets/svg/play.svg');
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  &.active > .card__img > .card__controls {
+    background-image: url('/assets/svg/pause.svg');
+    opacity: 1;
+  }
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  line-height: 1.4em;
+  overflow: hidden;
+}
+
+.card__title {
+  font-size: 1.7em;
+  line-height: 1.1em;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  margin: 0.2em;
+}
+
+.card__img {
+  display: flex;
+  align-items: flex-end;
+  height: 28rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 6px 6px 0px 0px;
+}
+
+.card__description {
+  min-height: 9rem;
+}
+
+.card__additional {
+  text-align: center;
+  font-style: italic;
+  color: $card-color;
+  margin: 0.9em 0;
+}
+
+.card--quiz {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .card__img {
+    background-position: top;
+  }
+  .card__info {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
