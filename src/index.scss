@@ -4,7 +4,7 @@
 
 html {
     font-size: 5px;
-    @media (min-width: 375px) {
+    @media (min-width: $xs) {
       font-size: 7px;
     }
     @media (min-width: $md) {
